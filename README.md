@@ -19,14 +19,12 @@ Fiecare exercițiu poate avea una sau mai multe cerințe de mai multe tipuri:
 ## Subiecte Abordate 🗃️
 
 1. **Introducere**
-    - Motivație
-    - Cerințe
+    - Proces, memorie și stivă
     - Formatul de fișiere ELF
-    - Coduri de operații
-    - Apeluri de sistem
-    - Structura stivei unui proces
-    - Instrumente generale folosite
-    - Vectori de atac
+    - Noțiuni despre exploatarea executabilelor
+    - Suprafața de Atac
+    - Motivație
+    - Instrumente
 2. **Suprascrierea Stivei. *Shellcodes* I**
     - Suprascrierea stivei
         - Modificarea variabilelor locale
