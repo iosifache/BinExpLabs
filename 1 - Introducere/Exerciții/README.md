@@ -34,7 +34,7 @@ Puteți identifica *flag*-ul de la sarcina de mai sus prin rularea comenzii `str
 
 Dacă nu, vă puteți da seama de ce din dezasamblarea funcției `check_flag` din librăria `libcheckflag.so`? Încercați aceeași tip de dezasamblare în Ghidra, eventual folosind funcția de decompilare.
 
-# 8- Apeluri de Sistem 💁
+# 8 - Apeluri de Sistem 💁
 
 Comanda `python3 -m http.server 8080` poate fi utilizată pentru crearea rapidă a unui server web pe portul 8080. Folosiți comanda `strace` pentru a identifica apelurile de sistem specifice creării unui *socket* și a acceptării conexiunilor pe el.
 

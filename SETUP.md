@@ -27,7 +27,8 @@ Ghidra este un program pe care îl vom folosi la **ingineria inversă a programe
 ```
 sudo apt-get install default-jdk
 wget -O /tmp/ghidra.zip https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.0.4_build/ghidra_10.0.4_PUBLIC_20210928.zip
-unzip /tmp/ghidra.zip -d /opt/ghidra
+unzip /tmp/ghidra.zip -d /opt
+mv /opt/ghidra_10.0.4_PUBLIC /opt/ghidra
 ```
 
 Programul poate fi rulat cu ajutorul comenzilor:
