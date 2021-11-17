@@ -48,3 +48,7 @@ Fiecare exercițiu poate avea una sau mai multe cerințe de mai multe tipuri:
     - *Address Space Layout Randomization*
     - *Data Execution Prevention*
     - *Stack canaries*
+
+## Probleme Uzuale 🤔
+
+Problemele întâlnite uzual în cadrul laboratoarelor sunt notate în fișierul [PROBLEMS.md](PROBLEMS.md).
