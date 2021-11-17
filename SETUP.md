@@ -8,6 +8,14 @@ Pentru acest set de laboratoare, recomandăm distribuțiile următoare, recomand
 - [Kali Linux](https://www.kali.org/get-kali); și
 - [Ubuntu Desktop](https://ubuntu.com/download/desktop).
 
+## Asamblorul NASM
+
+NASM este un asamblor pe care îl folosim la translatarea codului de asamblare în limbaj mașină. Instalarea lui poate fi efectuată cu comanda de mai jos.
+
+```
+sudo apt-get install nasm
+```
+
 ## Python 3 și Pachetul `pwntools`
 
 Python 3 este un limbaj interpretat, de uz generic. Va fi util pentru **a automatiza anumite sarcini** ce, în mod uzual, ar fi fost efectuate cu ajutorul utilitarelor dedicate (care, de multe ori, nu oferă API-uri).
@@ -15,7 +23,7 @@ Python 3 este un limbaj interpretat, de uz generic. Va fi util pentru **a automa
 Suplimentar, vom folosi și pachetul `pwntools` pentru a ușura **scrierea și rularea de *exploit*-uri**.
 
 ```
-apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
+sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade pwntools
 ```

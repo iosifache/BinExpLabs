@@ -6,7 +6,7 @@
 
 ## Rezolvare
 
-Vezi fișierul `strings.py`. Odată rulat cu comanda, va afișa *flag*-ul. Comportamentul lui este asemănător utilitarului `strings`, ce putea fi utilizat aici astfel: `strings executable -n 15 | wc -l`.
+Vezi fișierul [`strings.py`](strings.py). Odată rulat cu comanda, va afișa *flag*-ul. Comportamentul lui este asemănător utilitarului `strings`, ce putea fi utilizat aici astfel: `strings lyrics.elf -n 15 | wc -l`.
 
 # 2 - Tipuri de Șiruri de Caractere Printabile 💁
 
@@ -26,7 +26,7 @@ Vezi fișierul `strings.py`. Odată rulat cu comanda, va afișa *flag*-ul. Compo
 
 ## Rezolvare
 
-Vezi fișierul `symbols.py`. Odată rulat cu comanda, va afișa *flag*-ul.
+Vezi fișierul [`symbols.py`](symbols.py). Odată rulat cu comanda, va afișa *flag*-ul.
 
 # 4 - Proveniența Simbolurilor 💁
 
@@ -50,13 +50,13 @@ Se observă faptul că executabilul afișează numai acea porțiune din șirul d
 
 Se începe cu primul caracter, testându-se toate posibilitățile. La încercarea la care programul afișează un caracter, atunci îl putem seta ca primul caracter din *flag*-ul construit progresiv și putem trece la următorul până când caracterul `}` (terminatorul de *flag*) apare.
 
-O implementare este oferită în fișierul `flag-checker.py`.
+O implementare este oferită în fișierul [`flag-checker.py`](flag-checker.py).
 
 # 6 - Librării Dinamice 💁
 
-Rulând comanda `ldd flag-checker` observăm faptul că executabilul folosește o librărie dinamică numită `libcheckflag.so`.
+Rulând comanda `ldd flag-checker.elf` observăm faptul că executabilul folosește o librărie dinamică numită `libcheckflag.so`.
 
-Pentru a identifica modul în care se apelează funcții din ea, rulăm comanda `objdump --disassemble=main -M intel flag-checker`, ce dezasamblează codul funcției `main` (argumentul `--disassemble`) în sintaxa specifică Intel (argumentul `-M`). Astfel, se ajunge la concluzia că libraria este încărcată în memorie prin apelul funcției `dlopen` și funcția din ea, `check_flag`, este referențiată printr-un apel `dlsym`.
+Pentru a identifica modul în care se apelează funcții din ea, rulăm comanda `objdump --disassemble=main -M intel flag-checker.elf`, ce dezasamblează codul funcției `main` (argumentul `--disassemble`) în sintaxa specifică Intel (argumentul `-M`). Astfel, se ajunge la concluzia că libraria este încărcată în memorie prin apelul funcției `dlopen` și funcția din ea, `check_flag`, este referențiată printr-un apel `dlsym`.
 
 # 7 - Dezasamblarea Programelor 💁
 

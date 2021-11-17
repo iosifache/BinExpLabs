@@ -1,16 +1,17 @@
-#/usr/bin/env python3
+#!/usr/bin/env python3
 
 import string
 
 from pwnlib.elf.elf import ELF
+from pwn import log
 
-FILENAME = "../Executabile/lyrics/lyrics"
+FILENAME = "../Exerciții/lyrics/lyrics.elf"
 TEXT_SECTION = ".text"
 EXECUTABLE_FLAG = 1
 
 
-def get_symbols(filename: str):
-    elf = ELF(filename)
+def get_symbols(filename: str) -> list:
+    elf = ELF(filename, checksec=False)
 
     # Preia sectiunea .text
     text_section = [
@@ -45,15 +46,14 @@ def get_symbols(filename: str):
     return symbols
 
 
-def main():
+def main() -> None:
     all_symbols = get_symbols(FILENAME)
 
     # Printeaza cate au fost gasite
-    print("[+] Numar de simboluri gasite: {}".format(
-        len(all_symbols)))
+    log.info("Numar de simboluri gasite este {}.".format(len(all_symbols)))
 
     # Printeaza sirurile de caractere
-    print("[+] Simbolurile gasite sunt:")
+    log.info("Simbolurile gasite sunt:")
     for symbol in all_symbols:
         print("\t- {}".format(symbol))
 

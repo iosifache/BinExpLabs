@@ -1,38 +1,38 @@
 # 1 - Număr de Șiruri de Caractere Printabile 🏁
 
-Câte șiruri de caractere cu lungime mai mare de 10 există în executabilul `lyrics`? Folosiți librăria `pwntool` pentru rezolvare.
+Câte șiruri de caractere cu lungime mai mare de 10 există în executabilul [`lyrics.elf`](lyrics/lyrics.elf)? Folosiți librăria `pwntool` pentru rezolvare.
 
 *Flag*-ul este în format `[0-9]*`.
 
 # 2 - Tipuri de Șiruri de Caractere Printabile 💁
 
-De unde provin șirurile de caractere găsite în executabilul `lyrics`?
+De unde provin șirurile de caractere găsite în executabilul [`lyrics.elf`](lyrics/lyrics.elf)?
 
 # 3 - Număr de Simboluri 🏁
 
-Identificați numărul de simboluri din segmentul de cod al executabilului `lyrics`. Folosiți librăria `pwntool` pentru rezolvare.
+Identificați numărul de simboluri din segmentul de cod al executabilului [`lyrics.elf`](lyrics/lyrics.elf). Folosiți librăria `pwntool` pentru rezolvare.
 
 *Flag*-ul este în format `[0-9]*`.
 
 # 4 - Proveniența Simbolurilor 💁
 
-Judecând după tipurile pe care comanda `nm` le produce asupra executabilului `lyrics`, presupuneți de unde vin simbolurile `lyrics`, `puts` și `main`.
+Judecând după tipurile pe care comanda `nm` le produce asupra executabilului [`lyrics.elf`](lyrics/lyrics.elf), presupuneți de unde vin simbolurile `lyrics`, `puts` și `main`.
 
 # 5 - Automatizarea Analizei Dinamice cu `pwntools` 🏁
 
-Rulați programul `flag-checker`. Cum operațiunile ce trebuiesc efectuate sunt prea multe, automatizați tot procesul de identificare a *flag*-ului cu ajutorul librăriei `pwntools`.
+Rulați programul [`flag-checker.elf`](flag-checker/flag-checker.elf). Cum operațiunile ce trebuiesc efectuate sunt prea multe, automatizați tot procesul de identificare a *flag*-ului cu ajutorul librăriei `pwntools`.
 
 *Flag*-ul este în format `SI{[A-Z_]*}`.
 
 # 6 - Librării Dinamice 💁
 
-Identificați modalitatea prin care executabilul `flag-checker` apelează funcția de verificare a *flag*-ului. Puteți folosi utilitarele `ldd` și `objdump`.
+Identificați modalitatea prin care executabilul [`flag-checker.elf`](flag-checker/flag-checker.elf) apelează funcția de verificare a *flag*-ului. Puteți folosi utilitarele `ldd` și `objdump`.
 
 # 7 - Dezasamblarea Programelor 💁
 
 Puteți identifica *flag*-ul de la sarcina de mai sus prin rularea comenzii `strings` asupra programului?
 
-Dacă nu, vă puteți da seama de ce din dezasamblarea funcției `check_flag` din librăria `libcheckflag.so`? Încercați aceeași tip de dezasamblare în Ghidra, eventual folosind funcția de decompilare.
+Dacă nu, vă puteți da seama de ce din dezasamblarea funcției `check_flag` din librăria [`libcheckflag.so`](flag-checker/libcheckflag.so)? Încercați aceeași tip de dezasamblare în Ghidra, eventual folosind funcția de decompilare.
 
 # 8 - Apeluri de Sistem 💁
 

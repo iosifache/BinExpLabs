@@ -22,17 +22,22 @@ Fiecare exercițiu poate avea una sau mai multe cerințe de mai multe tipuri:
     - Proces, memorie și stivă
     - Formatul de fișiere ELF
     - Noțiuni despre exploatarea executabilelor
-    - Suprafața de Atac
+    - Suprafața de atac
     - Motivație
     - Instrumente
 2. **Suprascrierea Stivei. *Shellcodes* I**
     - Suprascrierea stivei
-        - Modificarea variabilelor locale
-        - Suprascrierea valorii de retur
-    - *Shellcodes*
+        - Rezultate
+            - Modificarea unor variabile (canarii)
+            - Modificarea adreselor de retur
+        - Funcționare
+        - Protecții
+    - *Shellcodes* I
+        - Funcționare
+        - Limitări
         - Crearea și testarea unui *shellcode*
 3. ***Shellcodes* II. Șiruri de Caractere de Formatare**
-    - *Shellcodes*
+    - *Shellcodes* II
         - Folosirea apelului de sistem `execve` pentru obținerea unui execuții de cod la distanță
     - Șiruri de caractere de formatare
         - Funcții specifice din limbajul C

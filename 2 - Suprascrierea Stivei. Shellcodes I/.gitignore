@@ -1,0 +1,9 @@
+# Omite din fișierele exercițiilor
+Exerciții/cookie_lover/cookie_lover.c
+Exerciții/cookie_lover/Makefile
+
+# Omite directorul cu rezolvările laboratorului
+Rezolvări
+
+# Omite chestionarul
+Chestionar.md

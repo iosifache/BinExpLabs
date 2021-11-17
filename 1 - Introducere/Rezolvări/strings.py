@@ -1,12 +1,14 @@
-#/usr/bin/env python3
+#!/usr/bin/env python3
 
 import string
 
-FILENAME = "../Executabile/lyrics/lyrics"
+from pwn import log
+
+FILENAME = "../Exerciții/lyrics/lyrics.elf"
 MIN_LENGTH = 15
 
 
-def get_printable_transformation():
+def get_printable_transformation() -> str:
     # Creeaza un vector de 256 de elemente
     chars = 256 * ['\0']
 
@@ -19,7 +21,7 @@ def get_printable_transformation():
     return "".join(chars).encode("utf-8")
 
 
-def get_strings(filename: str, min_length: int):
+def get_strings(filename: str, min_length: int) -> list:
     # Citeste continutul fisiereului
     content = open(filename, "rb").read()
 
@@ -37,16 +39,16 @@ def get_strings(filename: str, min_length: int):
     return all_strings
 
 
-def main():
+def main() -> None:
     # Obtine sirurile de caractere printabile
     all_strings = get_strings(FILENAME, MIN_LENGTH)
 
     # Printeaza cate au fost gasite
-    print("[+] Numar de siruri de caractere printabile: {}".format(
+    log.info("Numarul de siruri de caractere printabile este {}.".format(
         len(all_strings)))
 
     # Printeaza sirurile de caractere
-    print("[+] Sirurile de caractere gasite sunt:")
+    log.info("Sirurile de caractere gasite sunt:")
     for string in all_strings:
         print("\t- {}".format(string))
 
