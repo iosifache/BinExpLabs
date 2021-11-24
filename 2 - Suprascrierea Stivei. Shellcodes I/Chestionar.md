@@ -12,7 +12,7 @@
 
 ![Stack Frame](../1%20-%20Introducere/Resurse/stack_frame.png)
 
-1. Ce beneficii pot aduce unui atacator atacurile de tip *buffer overflow* și cu *shellcodes*?
+2. Ce beneficii pot aduce unui atacator atacurile de tip *buffer overflow* și cu *shellcodes*?
 
 ## Altele
 
