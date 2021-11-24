@@ -1,7 +1,7 @@
 all: clean build
 
 build:
-	gcc -m32 source.c -o lyrics.elf
+	gcc -m32 -no-pie lyrics.c -o lyrics.elf
 
 clean:
 	rm -f lyrics.elf

@@ -36,13 +36,13 @@ Fiecare exercițiu poate avea una sau mai multe cerințe de mai multe tipuri:
         - Funcționare
         - Limitări
         - Crearea și testarea unui *shellcode*
-3. ***Shellcodes* II. Șiruri de Caractere de Formatare**
+3. ***Shellcodes* II. Atacuri cu Șiruri de Caractere de Formatare**
     - *Shellcodes* II
-        - Folosirea apelului de sistem `execve` pentru obținerea unui execuții de cod la distanță
-    - Șiruri de caractere de formatare
+        - Folosirea apelului de sistem `execve` pentru obținerea unui execuții de cod
+    - Atacuri cu Șiruri de caractere de formatare
         - Funcții specifice din limbajul C
-        - Declanșarea unui *leak* de informații
-        - Suprascrierea adrese de retur
+        - Citirea informațiilor din memoria procesului
+        - Suprascrierea informațiilor din memoria procesului
 4. **Metode de Prevenție**
     - Eliminarea simbolurilor
     - *Address Space Layout Randomization*
