@@ -18,36 +18,7 @@ Fiecare exercițiu poate avea una sau mai multe cerințe de mai multe tipuri:
 
 ## Subiecte Abordate 🗃️
 
-1. **Introducere**
-    - Proces, memorie și stivă
-    - Formatul de fișiere ELF
-    - Noțiuni despre exploatarea executabilelor
-    - Suprafața de atac
-    - Motivație
-    - Instrumente
-2. **Suprascrierea Stivei. *Shellcodes* I**
-    - Suprascrierea stivei
-        - Rezultate
-            - Modificarea unor variabile (canarii)
-            - Modificarea adreselor de retur
-        - Funcționare
-        - Protecții
-    - *Shellcodes* I
-        - Funcționare
-        - Limitări
-        - Crearea și testarea unui *shellcode*
-3. ***Shellcodes* II. Atacuri cu Șiruri de Caractere de Formatare**
-    - *Shellcodes* II
-        - Folosirea apelului de sistem `execve` pentru obținerea unui execuții de cod
-    - Atacuri cu Șiruri de caractere de formatare
-        - Funcții specifice din limbajul C
-        - Citirea informațiilor din memoria procesului
-        - Suprascrierea informațiilor din memoria procesului
-4. **Metode de Prevenție**
-    - Eliminarea simbolurilor
-    - *Address Space Layout Randomization*
-    - *Data Execution Prevention*
-    - *Stack canaries*
+Subiectele abordate în cadrul laboratoarelor sunt încorporate într-un document separat, [MINDMAP.md](MINDMAP.md).
 
 ## Probleme Uzuale 🤔
 
