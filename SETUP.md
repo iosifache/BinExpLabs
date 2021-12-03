@@ -56,8 +56,3 @@ Instalarea este efectuată prin rularea comenzilor de mai jos:
 git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 ```
-
-## Resurse
-
-- [Ghid Oficial de Instalare a Ghidra](https://ghidra-sre.org/InstallationGuide.html)
-- [Repository PEDA](https://github.com/longld/peda)

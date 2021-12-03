@@ -69,6 +69,9 @@
         - `nm`
         - `ldd`
         - `objdump`
+        - `upx`
+        - `nasm`
+        - `strip`
         - Ghidra
     - Pur dinamice
         - `ltrace`
@@ -78,6 +81,7 @@
     - Hibride
         - `pwntools`
     - Altele
+        - `gcc`
         - `man`
 - Exemple concrete
     - Execuție de cod la distanță în Google Chrome
