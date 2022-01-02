@@ -53,17 +53,17 @@
 	\begin{frame}
 		\frametitle{Suprascrierea \textit{Buffer}-ului}\pause
 		\begin{itemize}[<+->]
-			\item \textbf{\textit{Buffer}}: Zonă temporară de memorie, folosită la un moment dat pentru procesarea sau mutarea datelor.
-			\item \textbf{Suprascrierea \textit{Buffer}-ului}: Scrierea într-un \textit{buffer} a unor date care depășesc limitele acestuia, suprascriind astfel zone de memorie vecine. Poate apărea la limbaje de programare care nu efectuează o verificare automată a limitelor zonelor de memorie în care se scrie (de exemplu, Assembly, C și C++).
+			\item \textit{Buffer}: Zonă temporară de memorie, folosită la un moment dat pentru procesarea sau mutarea datelor.
+			\item \textit{Suprascrierea Buffer-ului}: Scrierea într-un \textit{buffer} a unor date care depășesc limitele acestuia, suprascriind astfel zone de memorie vecine. Poate apărea la limbaje de programare care nu efectuează o verificare automată a limitelor zonelor de memorie în care se scrie (de exemplu, Assembly, C și C++).
 		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Categorii}\pause
 		\begin{itemize}[<+->]
-			\item \textbf{În \textit{Stivă}}: Zona de memorie suprascrisă aparține de stiva procesului, \textit{buffer}-ul fiind o variabilă locală.
-			\item \textbf{În \textit{\textit{Heap}}}: Zona de memorie suprascrisă aparține de \textit{heap}, \textit{buffer}-ul fiind o variabilă alocată dinamic.
-			\item \textbf{La Nivel de Tip de Date}: Efectuarea de operațiuni care rezultă într-o valoare ce nu poate fi salvată într-un anumit tip de date. De exemplu, \mintinline{bash}{(char)(2 * 128)} e egal cu \mintinline{bash}{0}.
+			\item În \textit{Stivă}: Zona de memorie suprascrisă aparține de stiva procesului, \textit{buffer}-ul fiind o variabilă locală.
+			\item În \textit{\textit{Heap}}: Zona de memorie suprascrisă aparține de \textit{heap}, \textit{buffer}-ul fiind o variabilă alocată dinamic.
+			\item \textit{La Nivel de Tip de Date}: Efectuarea de operațiuni care rezultă într-o valoare ce nu poate fi salvată într-un anumit tip de date. De exemplu, \mintinline{bash}{(char)(2 * 128)} e egal cu \mintinline{bash}{0}.
 		\end{itemize}
 	\end{frame}
 	
@@ -76,20 +76,20 @@
 	\begin{frame}
 		\frametitle{Rezultatele Suprascrierii Stivei}\pause
 		\begin{itemize}[<+->]
-			\item Modificarea unor \textbf{variabile}
+			\item Modificarea unor variabile
 			    \begin{itemize}
         			\item Referințe către funcții
         			\item Canarii
         		\end{itemize}
-        	\item Modificarea \textbf{adreselor de retur}
+        	\item Modificarea adreselor de retur
 		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Protecții}\pause
 		\begin{itemize}[<+->]
-			\item \textbf{Impunerea unei lungimi maxime} la copierea în \textit{buffer}
-			\item Folosirea unor \textbf{mecanisme de securitate} impuse de compilator (canarii), la nivel de sistem de operare (Data Execution Prevention pe Windows) sau \textit{hardware} (bitul NX în intrările din tabelele de pagini ale procesorului)
+			\item Impunerea unei lungimi maxime la copierea în \textit{buffer}
+			\item Folosirea unor mecanisme de securitate impuse de compilator (canarii), la nivel de sistem de operare (Data Execution Prevention pe Windows) sau \textit{hardware} (bitul NX în intrările din tabelele de pagini ale procesorului)
 		\end{itemize}
 	\end{frame}
 	
@@ -99,8 +99,8 @@
 	\begin{frame}
 		\frametitle{\textit{Shellcodes}}\pause
 		\begin{itemize}[<+->]
-			\item \textbf{\textit{Shellcode}}: Secvență de coduri de operații folosită în exploatarea de programe pentru efectuarea unor sarcini (de obicei, deschiderea unui \textit{shell}).
-			\item \textbf{Scris în Assembly} (recomandat datorită controlului mai mare), eventual în C (rezultatul depinde de compilator)
+			\item \textit{\textit{Shellcode}}: Secvență de coduri de operații folosită în exploatarea de programe pentru efectuarea unor sarcini (de obicei, deschiderea unui \textit{shell}).
+			\item Scris în Assembly (recomandat datorită controlului mai mare), eventual în C (rezultatul depinde de compilator)
 		\end{itemize}
 	\end{frame}
 	
@@ -121,6 +121,14 @@
 	
 	% Third section
 	\section{Exerciții}
+	
+	\begin{frame}
+		\frametitle{Exerciții}\pause
+		\begin{enumerate}[<+->]
+		    \item Suprascrierea Stivei
+		    \item Crearea și Testarea unui \textit{Shellcode}
+	    \end{enumerate}
+	\end{frame}
 
 	\begin{frame}
 		\frametitle{Recomandări}\pause

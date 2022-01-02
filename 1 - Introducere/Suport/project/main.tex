@@ -104,12 +104,12 @@
 	\begin{frame}
 		\frametitle{Procese. Executabile}\pause
 		\begin{itemize}[<+->]
-		    \item \textbf{Proces}: Set de instrucțiuni ce sunt grupate pentru a fi \textbf{executate} pe procesor, în cadrul \textbf{sistemului de operare} gazdă, cu scopul de a transforma \textbf{date de intrare} în \textbf{date de ieșire}.
-			\item \textbf{Executabil}: Fișier care încapsulează instrucțiuni ce trebuiesc executate de procesor și pe baza căruia este creat un proces. Numit și binar.
-			\item Cele mai comune \textbf{formate}
+		    \item \textit{Proces}: Set de instrucțiuni ce sunt grupate pentru a fi executate pe procesor, în cadrul sistemului de operare gazdă, cu scopul de a transforma date de intrare în date de ieșire.
+			\item \textit{Executabil}: Fișier care încapsulează instrucțiuni ce trebuiesc executate de procesor și pe baza căruia este creat un proces. Numit și binar.
+			\item Cele mai comune formate
 			    \begin{itemize}
         			\item Portable Executable (abreviat PE, specific Windows)
-        			\item \textbf{Executable and Linkable Format} (abreviat ELF, specific Unix)
+        			\item Executable and Linkable Format (abreviat ELF, specific Unix)
         		\end{itemize}
 		\end{itemize}
 	\end{frame}
@@ -138,16 +138,16 @@
 	\begin{frame}
 		\frametitle{Terminologie}\pause
 		\begin{itemize}[<+->]
-		    \item \textbf{Vulnerabilitate}: Slăbiciune a unui sistem informatic, ce poate provoca o funcționare incorectă a lui.
-			\item \textbf{Exploatare}: Atacarea cu succes a unui sistem informatic, prin intermediul unei vulnerabilități.
-		    \item \textbf{Exploatarea Executabilelor}: Provocarea de către un atacator a execuției incorecte a unui executabil.
+		    \item \textit{Vulnerabilitate}: Slăbiciune a unui sistem informatic, ce poate provoca o funcționare incorectă a lui.
+			\item \textit{Exploatare}: Atacarea cu succes a unui sistem informatic, prin intermediul unei vulnerabilități.
+		    \item \textit{Exploatarea Executabilelor}: Provocarea de către un atacator a execuției incorecte a unui executabil.
 		\end{itemize}
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Suprafața de Atac}\pause
 		\begin{itemize}[<+->]
-		    \item \textbf{Set de puncte} (numite vectori de atac) de la marginea unui sistem informatic  pe care \textbf{un atacator le poate folosi} pentru a interacționa cu el (obținerea accesului, extragerea datelor, perturbarea funcționării).
+		    \item Set de puncte (numite vectori de atac) de la marginea unui sistem informatic  pe care un atacator le poate folosi pentru a interacționa cu el (obținerea accesului, extragerea datelor, perturbarea funcționării).
 		    \item Vectori uzuali de atac
     		    \begin{itemize}
         		    \item \mintinline{bash}{stdin}
@@ -163,12 +163,12 @@
 	\begin{frame}
 		\frametitle{Motivație}\pause
 		\begin{itemize}[<+->]
-		    \item Înțelegerea \textbf{mentalității de atacator}
-		    \item \textbf{\textit{Bug bounty}}
+		    \item Înțelegerea mentalității de atacator
+		    \item \textit{Bug bounty}
     		    \begin{itemize}
     		        \item CVE-2019-5790, ca \textit{integer overflow} în Google Chrome, ce permitea execuția de cod de la distanță
     		    \end{itemize}
-		    \item \textbf{\textit{Zero days}}
+		    \item \textit{Zero days}
 		        \begin{itemize}
     		        \item \textit{Marketplaces}, precum Zerodium
     		        \item Utilizarea în atacuri avansate, precum Stuxnet
@@ -176,40 +176,55 @@
 		\end{itemize}
 	\end{frame}
 	
-	% Forth section
+	% Third section
 	\section{Instrumente}
 	
 	\begin{frame}
 		\frametitle{Pur Statice}\pause
 		\begin{itemize}[<+->]
-		    \item \textbf{\mintinline{bash}{strings}}: Extragerea șirurilor de caractere printabile din fișiere.
-		    \item \textbf{\mintinline{bash}{nm}}: Extragerea simbolurilor din fișierele obiect (atât executabile, cât și librării).
-		    \item \textbf{\mintinline{bash}{ldd}}: Extragerea dependințelor către librării dinamice.
-		    \item \textbf{\mintinline{bash}{objdump}}: Extrage informații din fișiere obiect. Poate fi folosit pentru dezasamblare.
-		    \item \textbf{\mintinline{bash}{Ghidra}}: Instrument pentru inginerie inversă, cu funcționalități de dezasamblare și decompilare.
+		    \item \mintinline{bash}{strings}: Extragerea șirurilor de caractere printabile din fișiere.
+		    \item \mintinline{bash}{nm}: Extragerea simbolurilor din fișierele obiect (atât executabile, cât și librării).
+		    \item \mintinline{bash}{ldd}: Extragerea dependințelor către librării dinamice.
+		    \item \mintinline{bash}{objdump}: Extrage informații din fișiere obiect. Poate fi folosit pentru dezasamblare.
+		    \item \mintinline{bash}{Ghidra}: Instrument pentru inginerie inversă, cu funcționalități de dezasamblare și decompilare.
 	    \end{itemize}
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Pur Dinamice}\pause
 		\begin{itemize}[<+->]
-		    \item \textbf{\mintinline{bash}{ltrace}}: Interceptarea apelurilor către librării dinamice.
-		    \item \textbf{\mintinline{bash}{strace}}: Interceptarea apelurilor de sistem.
-		    \item \textbf{\mintinline{bash}{netstat}}: Oferă detalii despre rețelistică, util pentru urmărirea conexiunilor efectuate.
-		    \item \textbf{\mintinline{bash}{gdb}}: Depanează programe, putând fi folosit împreună cu \textbf{PEDA}.
+		    \item \mintinline{bash}{ltrace}: Interceptarea apelurilor către librării dinamice.
+		    \item \mintinline{bash}{strace}: Interceptarea apelurilor de sistem.
+		    \item \mintinline{bash}{netstat}: Oferă detalii despre rețelistică, util pentru urmărirea conexiunilor efectuate.
+		    \item \mintinline{bash}{gdb}: Depanează programe, putând fi folosit împreună cu PEDA.
 	    \end{itemize}
 	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Altele}\pause
 		\begin{itemize}[<+->]
-		    \item \textbf{\mintinline{bash}{pwntools}}: Librărie Python3 ce ușurează exploatarea programelor
-		    \item \textbf{\mintinline{bash}{man}}: Interfață pentru manualele comenzilor.
+		    \item \mintinline{bash}{pwntools}: Librărie Python3 ce ușurează exploatarea programelor
+		    \item \mintinline{bash}{man}: Interfață pentru manualele comenzilor.
 	    \end{itemize}
 	\end{frame}
 	
-	% Fifth section
+	% Forth section
 	\section{Exerciții}
+	
+	\begin{frame}
+		\frametitle{Exerciții}\pause
+		\begin{enumerate}
+		    \item Număr de Șiruri de Caractere Printabile
+		    \item Tipuri de Șiruri de Caractere Printabile
+		    \item Număr de Simboluri
+		    \item Proveniența Simbolurilor
+		    \item Automatizarea Analizei Dinamice cu \mintinline{bash}{pwntools}
+		    \item Librării Dinamice
+		    \item Dezasamblarea Programelor
+		    \item Apeluri de Sistem
+		    \item Conexiuni
+	    \end{enumerate}
+	\end{frame}
 	
 	\begin{frame}
 		\frametitle{Recomandări}\pause
@@ -219,7 +234,7 @@
 	    \end{itemize}
 	\end{frame}
 	
-    % Sixth section
+    % Forth section
 	\section{Recapitulare}
 	
 	\begin{frame}
