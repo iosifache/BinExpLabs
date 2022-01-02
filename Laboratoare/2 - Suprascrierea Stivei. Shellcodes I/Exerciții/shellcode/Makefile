@@ -1,4 +1,4 @@
-# Marcheaza stiva ca fiind executabila
+# Marchează stiva ca fiind executabilă
 NO_STACK_SECURITY=-z execstack
 
 all: clean execution_from_stack.elf execution_with_mprotect.elf

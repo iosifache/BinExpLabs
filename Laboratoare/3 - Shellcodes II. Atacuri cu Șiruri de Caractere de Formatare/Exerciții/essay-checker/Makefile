@@ -1,4 +1,4 @@
-# Marcheaza stiva ca fiind executabila
+# Marchează stiva ca fiind executabilă
 NO_STACK_SECURITY=-z execstack -fno-stack-protector
 
 all: clean build

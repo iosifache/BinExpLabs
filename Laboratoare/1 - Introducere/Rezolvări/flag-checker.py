@@ -13,16 +13,16 @@ FLAG_END_CHAR = "}"
 
 
 def main() -> None:
-    # Dezactiveaza mesajele de jurnalizare ale pwntools
+    # Dezactivează mesajele de jurnalizare ale pwntools
     context.log_level = "error"
 
     current_flag = ""
     for iteration in range(MAX_FLAG_LENGTH):
         for char in CHARSET:
-            # Lanseaza un proces nou
+            # Lansează un proces nou
             p = process([FILENAME, current_flag + char], env=ENVIRONMENT)
 
-            # Preia iesirea si verifica daca ea produce vreo schimbare
+            # Preia ieșirea și verifică dacă ea produce vreo schimbare
             output = p.recvall()
             if len(output) > len(current_flag):
                 current_flag = output.decode("utf-8")
@@ -30,11 +30,11 @@ def main() -> None:
                 break
 
         if (FLAG_END_CHAR in current_flag):
-            # Reactiveaza mesajele de jurnalizare ale pwntools
+            # Reactivează mesajele de jurnalizare ale pwntools
             context.log_level = "info"
 
-            # Cum programul printeaza si alte caractere care nu sunt de interes,
-            # printam numai prima linie
+            # Cum programul printează și alte caractere care nu sunt de interes,
+            # printăm numai prima linie
             current_flag = current_flag.split("\n")[0]
             log.success("Flag-ul este {}.".format(current_flag))
 

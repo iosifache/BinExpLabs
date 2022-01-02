@@ -9,10 +9,10 @@ MIN_LENGTH = 15
 
 
 def get_printable_transformation() -> str:
-    # Creeaza un vector de 256 de elemente
+    # Creează un vector de 256 de elemente
     chars = 256 * ['\0']
 
-    # Plaseaza elementele de interes
+    # Plasează elementele de interes
     for i in range(32, 127):
         chars[i] = chr(i)
     chars[ord('\n')] = "\n"
@@ -22,15 +22,15 @@ def get_printable_transformation() -> str:
 
 
 def get_strings(filename: str, min_length: int) -> list:
-    # Citeste continutul fisiereului
+    # Citește conținutul fișierului
     content = open(filename, "rb").read()
 
-    # Transforma caracterele neprintabile in NULL, obtinand astfel o lista
+    # Transformă caracterele neprintabile în NULL, obținand astfel o listă
     all_strings = content.translate(
         get_printable_transformation()).split(b'\0')
 
-    # Filtreaza lista astfel incat sa contina numai caractere siruri de
-    # caractere cu lungimea minima
+    # Filtrează lista astfel încat să conțina numai șiruri de caractere cu
+    # lungimea minimă
     all_strings = [
         string.decode("utf-8") for string in all_strings
         if len(string) >= min_length
@@ -40,15 +40,15 @@ def get_strings(filename: str, min_length: int) -> list:
 
 
 def main() -> None:
-    # Obtine sirurile de caractere printabile
+    # Obține șirurile de caractere printabile
     all_strings = get_strings(FILENAME, MIN_LENGTH)
 
-    # Printeaza cate au fost gasite
-    log.info("Numarul de siruri de caractere printabile este {}.".format(
+    # Printează câte au fost găsite
+    log.info("Numărul de șiruri de caractere printabile este {}.".format(
         len(all_strings)))
 
-    # Printeaza sirurile de caractere
-    log.info("Sirurile de caractere gasite sunt:")
+    # Printează șirurile de caractere
+    log.info("Șirurile de caractere găsite sunt:")
     for string in all_strings:
         print("\t- {}".format(string))
 
