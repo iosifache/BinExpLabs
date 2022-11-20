@@ -1,2 +1,5 @@
 # Omite fișierele specifice .vscode
 .vscode
+
+# Omite fișierele specifice Mac
+.DS_Store
