@@ -191,7 +191,7 @@ section {
 
 # Sume Oferite de Zerodium
 
-![width:600px](zerodium-prices.png)
+![width:600px](Imagini/zerodium-prices.png)
 
 ---
 
@@ -205,7 +205,7 @@ section {
 
 # Procesul de Vânzare în Zerodium
 
-![Zerodium Sales Cycle](zerodium-process.png)
+![Zerodium Sales Cycle](Imagini/zerodium-process.png)
 
 ---
 
@@ -219,7 +219,7 @@ section {
 
 # *Killchain*-ul Stuxnet
 
-![Stuxnet](stuxnet.png)
+![Stuxnet](Imagini/stuxnet.png)
 
 ---
 
@@ -276,4 +276,4 @@ section {
 
 <!-- _class: lead invert -->
 
-![Ready Boi](ready-boi.png)
+![Ready Boi](Imagini/ready-boi.png)
