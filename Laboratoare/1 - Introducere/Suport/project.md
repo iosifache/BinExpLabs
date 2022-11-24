@@ -32,7 +32,7 @@ paginate: true
 
 - Nota celor 4 laboratoare va fi obținută în sesiune.
 - Examenul va fi format din:
-  - Întrebări cu răspuns liber, din subiectele discutate; și
+  - Întrebări cu răspuns liber, din subiectele deja discutate; și
   - Exercițiu practic, cu *walktrough*.
 
 ---
@@ -51,7 +51,7 @@ paginate: true
 # *Must-have*
 
 - Resurse
-    - Mașină virtuală cu Linux (cu suport de Intel pe 32 biți)
+    - Mașină virtuală cu Linux (cu suport de Intel pe 32 de biți)
     - Python 3 cu librăria `pwntools`
     - Ghidra
     - PEDA
@@ -60,14 +60,16 @@ paginate: true
 
 # *Nice-to-have*
 
-- Cunoștințe de limbaj de asamblare
-- Cunoștințe despre sisteme de operare
-- Experiență cu Linux
-- Experiență cu Python 3
+- Cunoștințe
+    - Limbaj de asamblare
+    - Sisteme de operare
+- Experiență
+    - Linux
+    - Python 3
 
 ---
 
-# Structura Laboratoarelor
+# Tematicile Laboratoarelor
 
 1. Introducere
 2. Tehnici de Descoperire a Vulnerabilităților
@@ -81,9 +83,9 @@ paginate: true
 - Pentru fiecare laborator:
   - Prezentare
   - Cerințele exercițiilor
-- Ghiduri
+- Ghiduri, dintre care:
   - Setarea mediului de lucru
-  - Rezolvarea unor probleme uzuale
+  - Rezolvarea unor probleme uzuale (FAQ)
 - Resurse
 
 ---
@@ -162,9 +164,9 @@ paginate: true
 - `stdin`
 - Argumente
 - Variabile de mediu
-- Fișiere (de configurație, baze de date)
-- Întreruperi
+- Fișiere (de configurație, baze de date etc.)
 - Dispozitive
+- Întreruperi
 
 ---
 
@@ -172,10 +174,52 @@ paginate: true
 
 - Înțelegerea mentalității de atacator
 - *Bug bounty*
-    - CVE-2019-5790, ca *integer overflow* în Google Chrome, ce permitea execuția de cod de la distanță
+    - CVE−2022-3602, ca suprascriere a stivei în OpenSSL, cu CVSS 7.5, ce permite execuția de cod de la distanță pe unele dispozitive
 - *Zero days*
     - *Marketplaces*, precum Zerodium
     - Utilizarea în atacuri avansate, precum Stuxnet
+
+---
+
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
+
+<!-- _class: lead -->
+
+# Sume Oferite de Zerodium
+
+![width:600px](zerodium-prices.png)
+
+---
+
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
+
+<!-- _class: lead -->
+
+# Procesul de Vânzare în Zerodium
+
+![Zerodium Sales Cycle](zerodium-process.png)
+
+---
+
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
+
+<!-- _class: lead -->
+
+# *Killchain*-ul Stuxnet
+
+![Stuxnet](stuxnet.png)
 
 ---
 
@@ -194,15 +238,14 @@ paginate: true
 - `ldd`: Extragerea dependințelor către librării dinamice.
 - `objdump`: Extrage informații din fișiere obiect. Poate fi
     folosit pentru dezasamblare.
-- `Ghidra`: Instrument pentru inginerie inversă, cu
-    funcționalități de dezasamblare și decompilare.
+- `Ghidra`: Efectuează operațiuni de inginerie inversă, inclusiv dezasamblare și decompilare.
 
 ---
 
 # Pur Dinamice
 
-- `ltrace`: Interceptarea apelurilor către librării dinamice.
-- `strace`: Interceptarea apelurilor de sistem.
+- `ltrace`: Interceptează apeluri către librării dinamice.
+- `strace`: Interceptează apeluri de sistem.
 - `netstat`: Oferă detalii despre rețelistică, util pentru
     urmărirea conexiunilor efectuate.
 - `gdb`: Depanează programe, putând fi folosit împreună cu
@@ -212,9 +255,9 @@ paginate: true
 
 # Altele
 
-- `pwntools`: Librărie Python3 ce ușurează exploatarea
-    programelor
-- `man`: Interfață pentru manualele comenzilor.
+- `pwntools`: Fiind o librărie Python 3, ușurează exploatarea
+    programelor.
+- `man`: Afișează manualele comenzilor.
 
 ---
 
