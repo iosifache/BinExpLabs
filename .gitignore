@@ -6,5 +6,8 @@ Makefile
 # Omite fișierele specifice .vscode
 .vscode
 
+# Omite export-urile HTML ale Marp
+export.html
+
 # Omite fișierele specifice Mac
 .DS_Store
