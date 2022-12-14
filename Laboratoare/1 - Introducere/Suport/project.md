@@ -167,6 +167,7 @@ paginate: true
 - Fișiere (de configurație, baze de date etc.)
 - Dispozitive
 - Întreruperi
+- Acțiuni în interfața grafică
 
 ---
 
