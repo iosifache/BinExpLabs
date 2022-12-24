@@ -121,21 +121,39 @@ paginate: true
 
 ---
 
-<!-- _class: lead invert -->
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
 
-# Formatul ELF 🖍️
+<!-- _class: lead -->
+
+![width:500px](images/draw_elf_format.png)
 
 ---
 
-<!-- _class: lead invert -->
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
 
-# Memoria unui Proces 🖍️
+<!-- _class: lead -->
+
+![width:450px](images/draw_process_memory.png)
 
 ---
 
-<!-- _class: lead invert -->
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
 
-# Stiva unui Proces 🖍️
+<!-- _class: lead -->
+
+![width:450px](images/draw_stack.png)
 
 ---
 
