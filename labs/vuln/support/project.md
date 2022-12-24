@@ -132,6 +132,18 @@ section {
 
 <!-- _class: lead -->
 
+![width:500px](images/draw_cfg_fuzzing.png)
+
+---
+
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
+
+<!-- _class: lead -->
+
 # Arhitectura unui *Fuzzer*
 
 ![width:800px](images/afl.webp)
@@ -182,6 +194,18 @@ section {
 - Se poate executa:
     - Static, analizând codul sursă al programului
     - Dinamic, instrumentând execuția și urmărind fluxul datelor în timp real.
+
+---
+
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
+
+<!-- _class: lead -->
+
+![width:500px](images/draw_taint_analysis.png)
 
 ---
 
