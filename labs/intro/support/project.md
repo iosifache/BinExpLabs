@@ -129,7 +129,7 @@ section {
 
 <!-- _class: lead -->
 
-![width:500px](images/draw_elf_format.png)
+![width:500px](images/draw-elf-format.png)
 
 ---
 
@@ -141,7 +141,7 @@ section {
 
 <!-- _class: lead -->
 
-![width:450px](images/draw_process_memory.png)
+![width:450px](images/draw-process-memory.png)
 
 ---
 
@@ -153,7 +153,7 @@ section {
 
 <!-- _class: lead -->
 
-![width:450px](images/draw_stack.png)
+![width:450px](images/draw-stack.png)
 
 ---
 

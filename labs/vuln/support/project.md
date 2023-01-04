@@ -132,7 +132,7 @@ section {
 
 <!-- _class: lead -->
 
-![width:500px](images/draw_cfg_fuzzing.png)
+![width:500px](images/draw-cfg-fuzzing.png)
 
 ---
 
@@ -205,7 +205,7 @@ section {
 
 <!-- _class: lead -->
 
-![width:500px](images/draw_taint_analysis.png)
+![width:500px](images/draw-taint-analysis.png)
 
 ---
 
