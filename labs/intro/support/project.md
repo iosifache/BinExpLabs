@@ -250,13 +250,10 @@ section {
 
 # Pur Statice
 
-- `strings`: Extragerea șirurilor de caractere printabile din
-    fișiere.
-- `nm`: Extragerea simbolurilor din fișierele obiect (atât
-    executabile, cât și librării).
+- `strings`: Extragerea șirurilor de caractere printabile din fișiere.
+- `nm`: Extragerea simbolurilor din fișierele obiect (atât executabile, cât și librării).
 - `ldd`: Extragerea dependințelor către librării dinamice.
-- `objdump`: Extrage informații din fișiere obiect. Poate fi
-    folosit pentru dezasamblare.
+- `objdump`: Extrage informații din fișiere obiect. Poate fi folosit pentru dezasamblare.
 - `Ghidra`: Efectuează operațiuni de inginerie inversă, inclusiv dezasamblare și decompilare.
 
 ---
@@ -265,17 +262,21 @@ section {
 
 - `ltrace`: Interceptează apeluri către librării dinamice.
 - `strace`: Interceptează apeluri de sistem.
-- `netstat`: Oferă detalii despre rețelistică, util pentru
-    urmărirea conexiunilor efectuate.
-- `gdb`: Depanează programe, putând fi folosit împreună cu
-    PEDA.
+- `netstat`: Oferă detalii despre rețelistică, util pentru urmărirea conexiunilor efectuate.
+- `AFL++`: Efectuează *fuzzing*.
+
+---
+
+# Hibride
+
+- `pwntools`: Fiind o librărie Python 3, ușurează exploatarea programelor.
 
 ---
 
 # Altele
 
-- `pwntools`: Fiind o librărie Python 3, ușurează exploatarea
-    programelor.
+- `gcc`: Compilează fișiere sursă C.
+- `Make`: Permite managementul compilării programelor.
 - `man`: Afișează manualele comenzilor.
 
 ---
