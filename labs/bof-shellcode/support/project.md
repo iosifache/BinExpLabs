@@ -44,12 +44,6 @@ paginate: true
 
 ---
 
-<!-- _class: lead invert -->
-
-# Funcționare 🖍️
-
----
-
 # Impact
 
 - Modificarea unor variabile
@@ -82,9 +76,27 @@ paginate: true
 
 ---
 
-<!-- _class: lead invert -->
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
 
-# Funcționare 🖍️
+<!-- _class: lead -->
+
+![width:700px](images/draw-shellcode-generation.png)
+
+---
+
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
+
+<!-- _class: lead -->
+
+![width:700px](images/draw-shellcode-bof.png)
 
 ---
 

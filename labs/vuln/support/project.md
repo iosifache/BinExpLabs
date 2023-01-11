@@ -181,6 +181,18 @@ section {
 
 <!-- _class: lead -->
 
+![width:500px](images/draw-aflplusplus.png)
+
+---
+
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
+
+<!-- _class: lead -->
+
 # CVE-uri Descoperite cu AFL++
 
 ![width:600px](images/aflpp-trophies.png)
