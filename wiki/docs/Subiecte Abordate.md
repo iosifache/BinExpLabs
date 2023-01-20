@@ -1,0 +1,112 @@
+---
+slug: /in-a-nutshell
+sidebar_position: 3
+---
+
+# Subiecte Abordate
+
+## Noțiuni Generale
+
+- Programare în C
+    - Funcționalitate de formatare
+- Sisteme de operare
+    - Executabile
+        - Formatul ELF
+    - Procese
+        - Memorie
+        - Stivă
+    - Librării
+        - Tipuri
+            - Statice
+            - Dinamice
+        - Apeluri de librărie
+    - Apeluri de sistem
+- Securitate cibernetică
+    - Concepte
+        - Vulnerabilitate
+        - Exploatare
+        - Suprafață de atac
+        - Vectori de atac
+
+## Exploatarea Executabilelor
+
+- Motivație
+    - Înțelegerea mentalității de atacator
+    - *Bug bounty*
+    - *Zero days*
+- Vectori de atac
+    - `stdin`
+    - Argumente
+    - Variabile de mediu
+    - Fișiere
+    - Întreruperi
+    - Dispozitive
+    - Acțiuni în interfața grafică
+- Vulnerabilități
+    - Suprascrierea stivei
+    - Suprascrierea întregilor
+    - Atacuri cu șiruri de formatare
+- Tehnici de descoperire a vulnerabilităților
+    - Fuzzing
+    - Analiza fluxului datelor
+    - Execuție simbolică
+    - Revizuirea codului sursă
+    - Analiza *crash*-urilor
+- Atacuri
+    - Tipuri
+        - Suprascrierea *buffer*-ului
+            - Categorii
+                - În stivă
+                - În *heap*
+                - La nivel de tip de date
+        - Atacuri cu *shellcodes*
+            - Limitări
+    - Rezultate
+        - Citirea și modificarea memoriei procesului
+            - Variabile
+            - Canarii
+            - *Stack pivoting*
+        - Schimbarea fluxului programului
+            - Modificarea adresei de retur
+            - Modificarea referințelor către funcții
+        - Întreruperea execuției
+- Protecții
+    - Scrierea securizată a programelor
+        - Verificarea tuturor intrărilor de la utilizator
+            - Lungime
+            - Conținut
+        - Activarea avertizărilor la nivel de compilator
+        - Eliminarea informațiilor inutile
+        - Împachetare
+    - Folosirea unor mecanisme de securitate
+        - La nivel de compilator
+            - Canarii
+        - La nivel de sistem de operare
+            - *Address Space Layout Randomization*
+            - *Data Execution Prevention*
+        - La nivel de Hardware
+            - Bitul NX
+- Instrumente
+    - Pur statice
+        - `strings`
+        - `nm`
+        - `ldd`
+        - `objdump`
+        - `upx`
+        - `nasm`
+        - `strip`
+        - Ghidra
+    - Pur dinamice
+        - `ltrace`
+        - `strace`
+        - `netstat`
+        - `AFL++`
+    - Hibride
+        - `pwntools`
+    - Altele
+        - `gcc`
+        - `man`
+- Exemple concrete
+    - Execuție de cod la distanță în OpenSSL
+    - Execuție de cod la distanță în aplicația client Steam
+    - Stuxnet
