@@ -13,6 +13,10 @@ sidebar_position: 2
 
 ## Exerciții
 
+<a href="https://github.com/iosifache/BinExpLabs/releases/download/v1.2/vuln.zip">
+    <img src="https://img.shields.io/badge/Release%20cu%20Fișierele%20Necesare-Descarcă-blue?style=for-the-badge&logo=github"/>
+</a>
+
 ### 1 - Fuzzing cu AFL++ 💁
 
 Plecând de la executabilul `essay-checker.elf`, identificați o intrare validă. Folosiți această intrare ca punct de plecare pentru fuzzing-ul cu AFL++. Scopul este de a obține un *crash*, pe care să îl analizați ulterior.

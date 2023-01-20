@@ -13,6 +13,10 @@ sidebar_position: 0
 
 ## Exerciții
 
+<a href="https://github.com/iosifache/BinExpLabs/releases/download/v1.1/intro.zip">
+    <img src="https://img.shields.io/badge/Release%20cu%20Fișierele%20Necesare-Descarcă-blue?style=for-the-badge&logo=github"/>
+</a>
+
 ### 1 - Număr de Șiruri de Caractere Printabile 🏁
 
 Câte șiruri de caractere cu lungime mai mare de 10 există în executabilul `lyrics.elf`?

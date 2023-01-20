@@ -13,6 +13,10 @@ sidebar_position: 2
 
 # Exerciții
 
+<a href="https://github.com/iosifache/BinExpLabs/releases/download/v1.3/bof-shellcode.zip">
+    <img src="https://img.shields.io/badge/Release%20cu%20Fișierele%20Necesare-Descarcă-blue?style=for-the-badge&logo=github"/>
+</a>
+
 ### 1 - Suprascrierea Stivei 🏁
 
 Analizați fișierul executabil `cookie_lover.elf` pentru a identifica funcționalitatea ce permite suprascrierea stivei și a o exploata pentru obținerea *flag*-ului.

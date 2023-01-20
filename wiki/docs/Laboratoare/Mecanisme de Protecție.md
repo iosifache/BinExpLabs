@@ -13,6 +13,10 @@ sidebar_position: 3
 
 ## Exerciții
 
+<a href="https://github.com/iosifache/BinExpLabs/releases/download/v1.4/protections.zip">
+    <img src="https://img.shields.io/badge/Release%20cu%20Fișierele%20Necesare-Descarcă-blue?style=for-the-badge&logo=github"/>
+</a>
+
 ### 1 - Verificarea Activării unor Mecanisme de Securitate 💁
 
 Folosiți instrumente disponibile în sistemul dumneavoastră de operare pentru a efectua următoarele sarcini:
