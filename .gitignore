@@ -1,8 +1,3 @@
-# Omite fișierele sursă
-*.c
-*.o
-Makefile
-
 # Omite fișierele specifice .vscode
 .vscode
 
