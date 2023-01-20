@@ -6,4 +6,4 @@
 
 ## Wiki 🔗
 
-Pentru suportul specific laboratoarelor, folosiți [wiki](https://github.com/iosifache/BinExpLabs/wiki)-ul acestui *repository*.
+Pentru suportul specific laboratoarelor, folosiți [wiki](https://binexplabs.iosifache.me)-ul.
