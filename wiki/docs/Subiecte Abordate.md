@@ -1,6 +1,6 @@
 ---
 slug: /in-a-nutshell
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Subiecte Abordate
