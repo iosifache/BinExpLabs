@@ -1,6 +1,6 @@
 ---
 slug: /solve-vuln
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Tehnici de Descoperire a Vulnerbilităților

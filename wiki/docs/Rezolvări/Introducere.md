@@ -13,7 +13,7 @@ sidebar_position: 0
 
 ### Rezolvare
 
-Vezi codul de mai jos. Odată rulat cu comanda, va afișa *flag*-ul.
+Vezi codul de mai jos. Odată rulat, va afișa *flag*-ul.
 
 ```python
 #!/usr/bin/env python3
@@ -95,7 +95,7 @@ Comportamentul lui este asemănător utilitarului `strings`, ce putea fi utiliza
 
 ### Rezolvare
 
-Vezi codul de mai jos. Odată rulat cu comanda, va afișa *flag*-ul.
+Vezi codul de mai jos. Odată rulat, va afișa *flag*-ul.
 
 ```python
 #!/usr/bin/env python3
