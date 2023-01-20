@@ -59,7 +59,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} BinExpLabs. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} BinExpLabs. Construit cu Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
