@@ -68,6 +68,30 @@ paginate: true
 
 ---
 
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
+
+<!-- _class: lead -->
+
+![width:700px](images/draw-packing.png)
+
+---
+
+<style scoped>
+section {
+    background-color: #fff;
+}
+</style>
+
+<!-- _class: lead -->
+
+![width:700px](images/draw-unpacking.png)
+
+---
+
 # Roluri
 
 - Reducerea dimensiunii executabilului și îngreunarea analizei de către posibili atacatori
