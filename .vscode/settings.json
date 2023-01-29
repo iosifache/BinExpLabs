@@ -1,0 +1,8 @@
+{
+    "markdownlint.config": {
+        "no-inline-html": false,
+        "single-title": false,
+        "no-duplicate-header": false,
+        "MD007": { "indent": 4 },
+    }
+}

@@ -1,6 +1,3 @@
-# Omite fișierele specifice .vscode
-.vscode
-
 # Omite export-urile HTML ale Marp
 export.html
 
