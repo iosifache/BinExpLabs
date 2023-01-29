@@ -11,7 +11,7 @@ sidebar_position: 2
     <img src="https://raw.githubusercontent.com/iosifache/BinExpLabs/main/labs/bof-shellcode/support/preview.png" width="400px" alt="Preview"/>
 </a>
 
-# Exerciții
+## Exerciții
 
 <a href="https://github.com/iosifache/BinExpLabs/releases/download/v1.3/bof-shellcode.zip">
     <img src="https://img.shields.io/badge/Release%20cu%20Fișierele%20Necesare-Descarcă-blue?style=for-the-badge&logo=github"/>
@@ -24,6 +24,7 @@ Analizați fișierul executabil `cookie_lover.elf` pentru a identifica funcțion
 ### 2 - Crearea și Testarea unui *Shellcode* 💁
 
 Rolul acestei sarcini este de a observa modul în care un *shellcode* este creat, compilat și rulat într-un mediu controlat (spre deosebire de execuția lui în cadrului unui *exploit*), cu ajutorul a două metode. Efectuați pașii de mai jos:
+
 1. Vizualizați conținutul fișierului `shellcode.S`. Care este funcționalitatea lui?
 2. Rulați comanda `make get_shellcode`. Ce reprezintă octeții returnați?
 3. Plasați șirul de octeți obținut anterior în fișierul `execution_from_stack.c`. Rulați comanda `make execution_from_stack.elf` și, ulterior, executați programul. Folosiți instrumentele prezentate în primul laborator pentru a înțelege cum se rulează *shellcode*-ul.

@@ -9,37 +9,37 @@ sidebar_position: 3
 
 Prima sarcină poate fi rezolvată cu utilitarul `nm`. Se observă faptul că al doilea executabil nu are niciun simbol, ceea ce indică utilizarea după compilare a `strip`.
 
-```
-nm fortress.elf | wc -l
+```bash
+$ nm fortress.elf | wc -l
 41
 ```
 
-```
-nm fortress.stripped.elf | wc -l 
+```bash
+$ nm fortress.stripped.elf | wc -l 
 nm: fortress.stripped.elf: no symbols
 0
 ```
 
-Pentru următorul set de executabile, dimensiunea fortress.packed.elf este cu mult mai mică decât a celuilalt executabil (care a fost compilat static, de unde și dimensiunea mare).
+Pentru următorul set de executabile, dimensiunea `fortress.packed.elf` este cu mult mai mică decât a celuilalt executabil (care a fost compilat static, de unde și dimensiunea mare).
 
-```
-ls -sh fortress.static.elf fortress.packed.elf
+```bash
+$ ls -sh fortress.static.elf fortress.packed.elf
 304K fortress.packed.elf  696K fortress.static.elf
 ```
 
 Împreună cu o observație referitoare la tipul de șiruri de caractere găsite în primul executabil menționat (de tipul `UPX!`, `?OTHT` și `tdx~x{`), putem să deducem împachetarea programului. Concluzia poate fi verificată suplimentar cu utilitarul `upx`.
 
-```
-upx -t fortress.packed.elf 
+```bash
+$ upx -t fortress.packed.elf 
 [...]
 testing fortress.packed.elf [OK]
 [...]
 ```
 
-Mecanismele de securitate ale executabilului fortress.elf se pot verifica prin comanda `checksec`, ce este oferită de librăria Python 3 deja instalată `pwntools`. Se observă în ieșire că mecanismele de protecție a stivei, cu canarii, și NX sunt activate.
+Mecanismele de securitate ale executabilului `fortress.elf` se pot verifica prin comanda `checksec`, ce este oferită de librăria Python 3 deja instalată `pwntools`. Se observă în ieșire că mecanismele de protecție a stivei, cu canarii, și NX sunt activate.
 
-```
-checksec fortress.elf 
+```bash
+$ checksec fortress.elf 
 [*] 'fortress.elf'
     Arch:     i386-32-little
     RELRO:    Partial RELRO
@@ -50,7 +50,7 @@ checksec fortress.elf
 
 Suplimentar, din Ghidra, se pot extrage informații despre modalitatea în care se efectuează verificarea canariilor. Decompilarea funcției `main` arată faptul că pe stivă este plasată o valoare (variabila `iVar1`), populată cu `gs:0x14` și verificată la sfârșit.
 
-```
+```c
 undefined4 main(void)
 
 {
@@ -72,8 +72,8 @@ undefined4 main(void)
 
 După verificarea secțiunilor, se constată faptul că niciuna nu are drepturi de execuție și scriere în același timp.
 
-```
-readelf --sections fortress.elf
+```bash
+$ readelf --sections fortress.elf
 There are 31 section headers, starting at offset 0x387c:
 
 Section Headers:

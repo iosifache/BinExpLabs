@@ -236,7 +236,7 @@ if __name__ == "__main__":
 
 Rulând comanda `ldd flag-checker.elf` observăm faptul că executabilul folosește o librărie dinamică numită `libcheckflag.so`.
 
-Pentru a identifica modul în care se apelează funcții din ea, rulăm comanda `objdump --disassemble=main -M intel flag-checker.elf`, ce dezasamblează codul funcției `main` (argumentul `--disassemble`) în sintaxa specifică Intel (argumentul `-M`). Astfel, se ajunge la concluzia că libraria este încărcată în memorie prin apelul funcției `dlopen` și funcția din ea, `check_flag`, este referențiată printr-un apel `dlsym`.
+Pentru a identifica modul în care se apelează funcții din ea, rulăm comanda `objdump --disassemble=main -M intel flag-checker.elf`, ce dezasamblează codul funcției `main` (argumentul `--disassemble`) în sintaxa specifică Intel (argumentul `-M`). Astfel, se ajunge la concluzia că librăria este încărcată în memorie prin apelul funcției `dlopen` și funcția din ea, `check_flag`, este referențiată printr-un apel `dlsym`.
 
 ## 7 - Dezasamblarea Programelor 💁
 
@@ -244,7 +244,7 @@ Cum *flag*-ul nu poate fi găsit în `strings`, putem rula comanda `objdump --di
 
 În același timp, Ghidra reușește să ușureze vizualizarea operațiunilor efectuate, prin modul său de decompilare:
 
-```
+```c
 [..]
 local_38 = 0x2a222429221a2832;
 local_30 = 0x3e2429353e262f28;
@@ -263,7 +263,7 @@ if (bVar1 != *(byte *)(param_1 + (int)local_3c)) {
 
 Verificând ieșirea comenzii `strace python3 -m http.server 8080`, observăm secvența de apeluri de sistem prezentă mai jos:
 
-```
+```bash
 socket(AF_INET, SOCK_STREAM|SOCK_CLOEXEC, IPPROTO_IP) = 3
 [..]
 bind(3, {sa_family=AF_INET, sin_port=htons(8080), sin_addr=inet_addr("0.0.0.0")}, 16) = 0
@@ -275,7 +275,7 @@ listen(3, 5)
 
 Rulându-se comanda `netstat -tlp`, se poate identifica rapid *socket*-ul TCP (opțiunea `-t`) în modul *listening* (opțiunea `-l`). Opțiunea `-p` este adăugată pentru a afișa și datele de identificare ale procesului (PID și executabil).
 
-```
+```bash
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
 [..]
 tcp        0      0 0.0.0.0:http-alt        0.0.0.0:*               LISTEN      53639/python3

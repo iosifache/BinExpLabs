@@ -29,7 +29,7 @@ sidebar_position: 6
 
 **Soluție**: Setați (pentru persistență, în `~/.profile`) variabile de mediu de mai jos. `JAVA_PATH` reprezintă calea unde este instalat JDK (calea returnată de `which java`).
 
-```
+```bash
 export JDK_HOME=JAVA_PATH
 export JAVA_HOME=${JDK_HOME}
 export PATH=$PATH:${JAVA_HOME}/bin
@@ -39,7 +39,7 @@ export PATH=$PATH:${JAVA_HOME}/bin
 
 **Problemă**: La rularea `gdb`, PEDA nu rulează corespunzător. Apare eroarea de mai jos:
 
-```
+```bash
 [...]
 ~/peda/peda.py:8: Error in sourced command file:
 Undefined command: "from". Try "help"

@@ -47,7 +47,7 @@ sidebar_position: 5
     - Suprascrierea întregilor
     - Atacuri cu șiruri de formatare
 - Tehnici de descoperire a vulnerabilităților
-    - Fuzzing
+    - *Fuzzing*
     - Analiza fluxului datelor
     - Execuție simbolică
     - Revizuirea codului sursă

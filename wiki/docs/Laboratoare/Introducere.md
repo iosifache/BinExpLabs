@@ -29,7 +29,7 @@ De unde provin șirurile de caractere găsite în executabilul `lyrics.elf`?
 
 ### 3 - Număr de Simboluri 🏁
 
-Identificați numărul de simboluri din segmentul de cod al executabilului `lyrics.elf`. 
+Identificați numărul de simboluri din segmentul de cod al executabilului `lyrics.elf`.
 
 *Flag*-ul este în format `[0-9]*`.
 
